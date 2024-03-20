@@ -1,25 +1,305 @@
-<!doctype html>
-<html amp lang="en">
-  <head>
-    <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Hello, AMPs</title>
-    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Open-source framework for publishing content",
-        "datePublished": "2015-10-07T12:02:41Z",
-        "image": [
-          "logo.jpg"
-        ]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pan Gulf Document Clearing Services</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Truculenta&display=swap">
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Truculenta', cursive;
+      background: linear-gradient(to bottom, #87ceeb, #ffffff); /* Sky blue-white gradient */
+      color: #000; /* Change text color to black for better readability */
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #333; /* Darken the navbar */
+      padding: 10px;
+      display: flex;
+      justify-content: space-between; /* Align logo to left and menu items to right */
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000; /* Ensure navbar stays on top */
+    }
+
+    nav img {
+      height: 30px; /* Adjust the height of the logo */
+      margin-right: 10px; /* Add some space between the logo and company name */
+      animation: fadeInLogo 1s ease; /* Fade-in animation for the logo */
+    }
+
+    @keyframes fadeInLogo {
+      from {
+        opacity: 0;
+        transform: translateY(-20px); /* Start slightly above its final position */
       }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-  </head>
-  <body>
-    <h1>Welcome to the mobile web</h1>
-  </body>
-</html>
+      to {
+        opacity: 1;
+        transform: translateY(0); /* Move to its final position */
+      }
+    }
+
+    .company-name {
+      color: #fff;
+      font-size: 18px; /* Decrease font size */
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s; /* Add transition for smooth hover effect */
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffd700; /* Change text color on hover */
+    }
+
+    /* Each section has a different background color */
+    #home { background-color: #f0f0f0; }
+    #about { background-color: #f9f9f9; }
+    #services { background-color: #fafafa; }
+    #contact { background-color: #fcfcfc; }
+
+    .section {
+      padding: 20px;
+      border-radius: 10px; /* Add rounded corners for a softer look */
+      overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for 3D effect */
+      min-height: 100vh; /* Set minimum height to full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f9f5e5; /* Background color resembling an old printed book page */
+      background-image: 
+        repeating-linear-gradient(
+          180deg, 
+          #f9f5e5, 
+          #f9f5e5 10px, 
+          #fff 10px, 
+          #fff 20px
+        ); /* Create a texture resembling paper */
+      animation: fadeIn 0.5s ease; /* Fade-in animation */
+      margin-bottom: 30px;
+    }
+
+    .contact-info {
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 600px) {
+      nav {
+        flex-direction: column; /* Stack logo and company name vertically on small screens */
+        align-items: flex-start;
+      }
+
+      nav img {
+        margin-right: 0; /* Remove the margin on smaller screens */
+      }
+
+      .company-name {
+        margin-left: 0; /* Remove the margin on smaller screens */
+      }
+
+      nav a {
+        margin: 10px 10px; /* Adjust margin for menu items on smaller screens */
+      }
+    }
+
+    /* Styles for the book-like layout */
+    .book {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .chapter-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .paragraph {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: left; /* Initially left-aligned */
+  opacity: 0; /* Initially hidden */
+  animation: fadeInParagraph 1s forwards; /* Fade-in animation */
+}
+
+.typewriter::after {
+  content: '';
+  animation: typing 3s steps(20) forwards; /* Typewriter animation */
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid; /* Cursor effect */
+  margin-left: 5px; /* Adjust spacing */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fadeInParagraph {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+
+  .bulleted-points {
+    list-style: none;
+    padding: 0;
+  }
+
+  .bulleted-points li {
+    position: relative;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  .bulleted-points li::before {
+    content: '\2605'; /* Unicode for star character */
+    position: absolute;
+    left: -20px;
+    animation: blink 1s infinite; /* Blinking animation */
+  }
+
+  @keyframes blink {
+    0%, 50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div>
+      <img src="logo.png" alt="Logo">
+      <span class="company-name">PAN GULF DOCUMENT CLEARING SERVICES</span>
+    </div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="home" class="section">
+        <div class="book">
+            <h1 class="chapter-title">Welcome to <b>PAN GULF DOCUMENT CLEARING SERVICES</b></h1>
+
+          <p class="typewriter paragraph">At <b>PAN GULF DOCUMENT CLEARING SERVICES</b>, we're <b>dedicated</b> to simplifying your document needs.</p>
+          <p class="typewriter paragraph">From individual requests to corporate requirements, our <b>expert team</b> is here to provide <b>efficient</b> and <b>reliable</b> service.</p>
+          <p class="typewriter paragraph"><b>Trust</b> us to handle your paperwork with <b>precision</b> and <b>professionalism</b>, so you can focus on what matters most.</p>
+          <p class="typewriter paragraph">Welcome to a <b>seamless</b> document solution experience with <b>PAN GULF DOCUMENT CLEARING SERVICES</b>.</p>
+        </div>
+      </div>
+
+
+    <div id="about" class="section">
+        <div class="book">
+            <h1 class="chapter-title">About Us</h1>
+      <p class="typewriter paragraph">At <b>PAN GULF DOCUMENT CLEARING SERVICES</b>, we pride ourselves on our commitment to excellence and customer satisfaction.With years of experience in the industry, our dedicated team of experts is well-equipped to handle a wide range of document clearing services, tailored to meet your specific requirements.</p>
+      </div>
+      <h2 class="chapter-title">Why Choose Us?</h2>
+      <ul class="bulleted-points">
+        <li><b>Expertise:</b> Our team consists of seasoned professionals with in-depth knowledge of document clearing procedures, ensuring accurate and reliable service every time.</li>
+
+            <li><b>Efficiency:</b> We understand the importance of time-sensitive document processing and strive to deliver prompt and efficient service to meet your deadlines.</li>
+            
+                <li><b>Reliability:</b> Count on us to handle your documents with care and confidentiality, maintaining the highest standards of professionalism throughout the process.</li>
+            
+                    <li><b>Personalized Service:</b> We take the time to understand your unique needs and provide customized solutions to ensure your satisfaction.</li>
+      </ul>
+    </div>
+
+    <div id="services" class="section">
+      <h1 class="chapter-title">Our Services</h1>
+      <p class="typewriter paragraph">Here are the services we offer:</p>
+      <ul class="bulleted-points">
+        <li><b>COMPANY PRO SERVICE</b></li>
+        <li><b>IMMIGRATION SERVICE</b></li>
+        <li><b>PRO SERVICES (LOCAL & GCC PRO)</b></li>
+        <li><b>ATTESTATION SERVICE</b></li>
+        <li><b>PROVIDING RELIABLE SPONSOR</b></li>
+        <li><b>TRANSLATION SERVICE</b></li>
+        <li><b>TYPING</b></li>
+        <li><b>GOLDEN VISA SERVICES</b></li>
+        <li><b>SAUDI VISIT VISA</b></li>
+        <li><b>OMAN VISIT VISA</b></li>
+        <li><b>ALGERIA VISA APPLICATION</b></li>
+        <li><b>AMER SERVICE</b></li>
+        <li><b>TASHEEL SERVICE</b></li>
+        <li><b>MEDICAL DHA, EHS</b></li>
+        <li><b>OCCUPATIONAL HEALTH CARD</b></li>
+        <li><b>EMIRATES ID</b></li>
+        <li><b>SAUDI MULTIPLE ENTRY VISA</b></li>
+        <li><b>HEALTH INSURANCE</b></li>
+        <li><b>COMPANY SETUP</b></li>
+        <li><b>RTA SERVICE</b></li>
+        <li><b>MOI SERVICE</b></li>
+        <li><b>DUBAI POLICE ONLINE</b></li>
+        <li><b>DOCUMENT CLEARING</b></li>
+        <li><b>DED SERVICE</b></li>
+        <li><b>ALL EMIRATES FAMILY VISA SERVICES</b></li>
+      </ul>
+    </div>
+
+    <div id="contact" class="section">
+        <h1 class="chapter-title">Contact Us</h1>
+      <div class="contact-info">
+        <p>Phone: +971 43219850</p>
+        <p>Email:
+            pangulfdxb@gmail.com</p>
+            <p>Address: Mazaya Centre, Sheikh Zayed Road, P.O. Box: 73219, Dubai - U.A.E</p>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.126337014509!2d55.26309357561318!3d25.198961631628897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f134e609581e1%3A0x88e70a2532bff585!2sMazaya%20Shopping%20Centre!5e0!3m2!1sen!2suk!4v1710974851901!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    
+    </body>
+    </html>
+    
